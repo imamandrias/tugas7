@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:kamusapp/menu/IndoEng.dart';
+import 'package:kamusapp/menu/PageEngIndo.dart';
 
 void main() {
   runApp(MyApp());
@@ -42,23 +45,33 @@ class HomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: <Widget>[
-            Container(
-              child: MaterialButton(
-                color: Colors.greenAccent,
-                textColor: Colors.blueGrey,
-                child: Text('Indonesia ke Inggris'),
-                onPressed: (){
-
-                },
-              ),
+            Padding(
+              padding: EdgeInsets.all(20.0),
             ),
             Container(
               child: MaterialButton(
                 color: Colors.greenAccent,
-                textColor: Colors.blueGrey,
+                textColor: Colors.black87,
+                child: Text('Indonesia ke Inggris'),
+                onPressed: (){
+                  Navigator.push(context, MaterialPageRoute(
+                      builder: (context) => PageIndoEng()
+                  ));
+                },
+              ),
+            ),
+            Padding(
+              padding: EdgeInsets.all(20.0),
+            ),
+            Container(
+              child: MaterialButton(
+                color: Colors.greenAccent,
+                textColor: Colors.black87,
                 child: Text('Inggris ke Indonesia'),
                 onPressed: (){
-
+                  Navigator.push(context, MaterialPageRoute(
+                    builder: (context) => PageEngIndo()
+                  ));
                 },
               ),
             ),
